@@ -26,6 +26,7 @@ and other formats. It's http://rubygems.org/gems/asciidoctor[published
 as a RubyGem] and is available under the MIT open source license.
 
 testing
+testing two
 
 ifndef::awestruct[]
 image::https://travis-ci.org/asciidoctor/asciidoctor.png?branch=master[Build Status, link="https://travis-ci.org/asciidoctor/asciidoctor"]
