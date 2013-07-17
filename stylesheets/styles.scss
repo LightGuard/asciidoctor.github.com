@@ -29,7 +29,7 @@
 // @import "foundation/components/keystrokes";
 // @import "foundation/components/labels";
 // @import "foundation/components/inline-lists";
-// @import "foundation/components/pagination";
+@import "foundation/components/pagination";
 @import "foundation/components/panels";
 // @import "foundation/components/pricing-tables";
 // @import "foundation/components/progress-bars";
@@ -578,6 +578,12 @@ table.tableblock > caption {
   }
 }
 
+td.hdlist1 {
+  vertical-align: top;
+  padding-right: .8em;
+  font-weight: bold;
+}
+
 .literalblock + .colist,
 .listingblock + .colist {
   margin-top: -0.5em;
@@ -608,9 +614,28 @@ table.tableblock td > p:last-child {
   margin-bottom: 0;
 }
 
-// TODO need to fill out all table styles
+.tableblock.halign-right {
+  text-align: right;
+}
+
 .tableblock.halign-center {
   text-align: center;
+}
+
+.tableblock.halign-left {
+  text-align: left;
+}
+
+.tableblock.valign-top {
+  vertical-align: top;
+}
+
+.tableblock.valign-middle {
+  vertical-align: middle;
+}
+
+.tableblock.valign-bottom {
+  vertical-align: bottom;
 }
 
 p.tableblock.header {
@@ -639,9 +664,13 @@ span.footnoteref {
   }
 }
 
-#footnotes div.footnote a {
-  font-weight: bold;
-  text-decoration: none;
+#footnotes .footnote {
+  font-size: emCalc(14px);
+  margin-top: emCalc(8px);
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
 }
 
 // Styles and colors for inline fun
@@ -784,9 +813,19 @@ span.footnoteref {
   }
 }
 
-.imageblock.feature {
-  @include panel($bg:#fff, $padding: .5em);
+// picked from foundation/components/_thumbs.css
+.thumb,
+.th {
+  line-height: 0;
+  display: inline-block;
+  border: $thumb-border-style $thumb-border-width $thumb-border-color;
+  @if $experimental {
+    -webkit-box-shadow: $thumb-box-shadow;
+  }
+  box-shadow: $thumb-box-shadow;
+}
 
+.imageblock {
   &.right {
     margin-left: 1em;
   }
@@ -794,6 +833,18 @@ span.footnoteref {
   &.left {
     margin-right: 1em;
   }
+
+  &.thumb,
+  &.th {
+    border-width: $thumb-border-width + ($thumb-border-width * .5);
+    & > .title {
+      padding: 0 emCalc(2px);
+    }
+  }
+}
+
+.imageblock.feature {
+  @include panel($bg:#fff, $padding: .5em);
 
   & > .title > span.credit {
     font-weight: normal;
@@ -815,6 +866,20 @@ span.footnoteref {
 
 b.button {
   padding: 4px 10px 3px 10px;
+}
+
+article.post {
+  .entry-content {
+    margin-bottom: $panel-margin-bottom;
+  }
+
+  .tags .label {
+    margin-right: $pagination-li-margin;
+  }
+}
+
+ul.pagination li.arrow a {
+  text-decoration: none;
 }
 
 @import "awesome-icons";

@@ -10,12 +10,18 @@ endif::awestruct[]
 ////
 TODO:
 - the preface still feels too long
+
+- "write once, publish everywhere (html, pdf, latex, etc)
+- versatile - custom backends let you produce any output
+- supported on github
+
+- XML is "hostile to the diff/merge algorithms used by most version-control systems"
 ////
 
 ``__Writing is hard__.''
-That's what experience tells us, at least.
+That's what experience tells us.
 
-But, we _need_ to do it, particularly in the tech industry.
+But, we _need_ to do it, especially in the tech industry.
 Even the most brilliant software is useless without good documentation.
 If the users fail, so does the project.
 
@@ -33,7 +39,7 @@ They offer a plain-text syntax, embellished with subtle, yet intuitive markup, t
 The natural feel of the syntax keeps you focused on the content.
 Best of all, the plain text can quickly and easily be translated into output formats such as HTML for presentation.
 
-In this introduction to AsciiDoc, we'll cover what it is and why it's valuable.
+In this introduction to AsciiDoc, we'll cover what it is, why it's valuable and what sets it apart from alternatives such as Markdown.
 You'll discover the key to escape the agony of writing documentation is dropping the angle brackets that are burying the knowledge you have to share.
 
 To learn how to reduce the work of writing and publishing content--whether it's notes, documentation, articles, books, web pages or good ol'-fashioned prose--and attain writing zen, or to simply set the ideas locked in your head free, read on.
@@ -49,7 +55,7 @@ AsciiDoc belongs to the family of http://en.wikipedia.org/wiki/Lightweight_marku
 AsciiDoc stands out from this group because it supports all the structural elements necessary for drafting articles, technical manuals, books, presentations and prose.
 In fact, it's capable of meeting even the most advanced publishing requirements and technical semantics.
 
-Serving as testament of this fact, many O'Reilly authors, including https://github.com/matthewmccullough[Matthew McCullough], https://github.com/tlberglund[Tim Berglund], https://github.com/oreillymedia/etudes-for-erlang[Simon St.Laurent] and http://www.apeth.net/matt/iosbooktoolchain.html[Matt Neuburg], used AsciiDoc to write their books for that iconic technical library.
+Serving as testament of this fact, many O'Reilly authors, including https://github.com/matthewmccullough[Matthew McCullough], https://github.com/tlberglund[Tim Berglund], https://github.com/oreillymedia/etudes-for-erlang[Simon St.Laurent] and http://www.apeth.net/matt/iosbooktoolchain.html[Matt Neuburg], have used AsciiDoc to write their books for that iconic technical library.
 
 From the very beginning, AsciiDoc was designed to be a shorthand replacement for http://www.docbook.org/whatis[DocBook], one of the formats AsciiDoc can generate.
 AsciiDoc can also produce beautiful HTML 5, PDFs, eBooks, man pages and even slide decks.
@@ -94,7 +100,7 @@ _So why do we struggle to write *documents*?_
 
 The main reason we struggle is because we don't write documents the same way we write e-mail.
 Instead, we allow ourselves to get distracted by complex word processors, bury the content in XML schemas like DocBook, or battle with finicky WYSIWYG editors.
-How do we get ourselves into this mess?
+How did we get ourselves into this mess?
 
 === Word processors, the real writer's block
 
@@ -235,6 +241,7 @@ That's why so many people are going all in on it.
 AsciiDoc is not as widely adopted as Markdown, but it's used in some pretty serious places. Here are a few notable examples:
 
 - http://oreillynet.com/oreilly/authors/welcome/asciidoc.csp[O'Reilly] and https://github.com/MakerPress[MakerPress]
+* http://clojure-cookbook.com[Clojure Cookbook] (https://github.com/clojure-cookbook/clojure-cookbook[AsciiDoc source])
 - http://github.com[GitHub] supports AsciiDoc syntax in repositories, wikis and gists (powered by http://asciidoctor.org[Asciidoctor])
 - http://www.nofluffjuststuff.com/home/magazine_subscribe[NFJS, the Magazine] is produced from articles written in AsciiDoc
 - Context and Dependency Injection for the Java EE Platform (CDI)
@@ -245,6 +252,7 @@ AsciiDoc is not as widely adopted as Markdown, but it's used in some pretty seri
 - http://www.modrails.com/documentation/Users%20guide%20Apache.html[Phusion Passenger Users Guides] (https://github.com/FooBarWidget/passenger/tree/master/doc[AsciiDoc source])
 - https://www.kernel.org/pub/software/scm/git/docs/user-manual.html[Git user manual] (https://github.com/git/git/tree/master/Documentation[AsciiDoc source])
 - http://enterprisewebbook.com[Enterprise Web Development: From Desktop to Mobile] (https://github.com/Farata/EnterpriseWebBook[AsciiDoc source])
+- Bintray https://bintray.com/docs/api.html[REST API] and https://bintray.com/docs/bintrayuserguide.html[User Guide]
 
 These examples are more than just testimonials.
 They should give you ideas about how to be successful with AsciiDoc for your own project.
